@@ -16,8 +16,12 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+   		<docker.image.prefix>f9193874containerregistry.azurecr.io</docker.image.prefix>
+   		<username>f9193874containerregistry</username>
+   		<password>/bUKAsTUhes/5gqEYGlc2b7dBN76JFuq</password>
 	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,6 +47,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<artifactId>jib-maven-plugin</artifactId>
+				<groupId>com.google.cloud.tools</groupId>
+				<version>1.8.0</version>
+				<configuration>
+					<from>
+						<image>openjdk:8-jre-alpine</image>
+					</from>
+					<to>
+						<image>${docker.image.prefix}/${project.artifactId}</image>
+						<auth>
+							<username>f9193874ContainerRegistry</username>
+							<password>/bUKAsTUhes/5gqEYGlc2b7dBN76JFuq</password>
+						</auth>
+					</to>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
