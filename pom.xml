@@ -59,8 +59,8 @@
 					<to>
 						<image>${docker.image.prefix}/${project.artifactId}</image>
 						<auth>
-							<username>f9193874ContainerRegistry</username>
-							<password>/bUKAsTUhes/5gqEYGlc2b7dBN76JFuq</password>
+							<username>${username}</username>
+							<password>${password}</password>
 						</auth>
 					</to>
 				</configuration>
